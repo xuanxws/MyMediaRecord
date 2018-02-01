@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="huainan.kidyn.cn.mymediarecord.MainActivity">
+
+    <ImageButton
+        android:id="@+id/ib_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/record"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_filepath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:text=""/>
+
+
+    <ImageButton
+        android:id="@+id/ib_compress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/compress"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_compress_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text=""/>
+</LinearLayout>

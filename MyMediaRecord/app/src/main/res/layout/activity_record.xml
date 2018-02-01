@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/ll_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+        <ListView
+            android:id="@+id/lv_ratio"
+            android:layout_width="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/translate"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/myprogress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text=""
+                android:textSize="16sp"/>
+
+            <huainan.kidyn.cn.mymediarecord.MyProgressbar
+                android:id="@+id/myprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:circle_bg="@color/white"
+                app:circle_radius="30dp"
+                app:radius_increment="40"
+                app:stoke_color="@color/colorPrimaryDark"
+                app:stoke_width="10"/>
+
+            <ImageView
+                android:id="@+id/iv_photo_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@+id/myprogress"
+                android:src="@mipmap/photo_change"/>
+
+            <ImageButton
+                android:id="@+id/iv_flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/myprogress"
+                android:background="@drawable/flash_close"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/iv_error"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:layout_toLeftOf="@+id/view"
+                android:scaleType="fitXY"
+                android:src="@mipmap/error"/>
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/view"
+                android:scaleType="fitXY"
+                android:src="@mipmap/right"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
